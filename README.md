@@ -2,7 +2,7 @@
  * @Author: 皇甫国贝
  * @Date: 2019-09-27 10:39:14
  * @LastEditors: 皇甫国贝
- * @LastEditTime: 2019-09-29 17:09:36
+ * @LastEditTime: 2019-09-29 17:11:10
  * @Description: 
  -->
 # 手摸手讲述VUE项目搭建及Es6的应用
@@ -47,6 +47,7 @@ element-ui :`npm i element-ui -S` //项目引用
 -S就是--save的简写 <br>
 -D就是--save-dev <br>
 这样安装的包的名称及版本号就会存在package.json的devDependencies(本地环境开发)这个里面，而--save会将包的名称及版本号放在dependencies(开发环境、生产环境都能使用)里面<br>
+
 #####解析
 devDependencies是只会在开发环境下依赖的模块，生产环境不会被打入包内。通过NODE_ENV=developement或NODE_ENV=production指定开发还是生产环境。<br>
 而dependencies依赖的包不仅开发环境能使用，生产环境也能使用。其实这句话是重点，按照这个观念很容易决定安装模块时是使用--save还是--save-dev。<br>
