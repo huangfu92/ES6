@@ -2,7 +2,7 @@
  * @Author: 皇甫国贝
  * @Date: 2019-09-27 10:39:14
  * @LastEditors: 皇甫国贝
- * @LastEditTime: 2019-09-29 17:26:27
+ * @LastEditTime: 2019-09-29 17:32:17
  * @Description: 
  -->
 # 手摸手讲述VUE项目搭建及Es6的应用
@@ -55,8 +55,9 @@ i:install缩写<br>
 名称|命令|说明
 --|--|--
 element-ui |`npm i element-ui -S` |UI组件库
-AXIOS|`npm install axios`|
-
+AXIOS|`npm install axios`|前后端交互（类似与ajax、XMLHttpRequest）
+vueX|`npm install vuex -S`|全局状态管理器
+vue-router|`npm install vue-router`|路由跳转
 
 
 
