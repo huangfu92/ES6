@@ -2,7 +2,7 @@
  * @Author: 皇甫国贝
  * @Date: 2019-09-27 10:39:14
  * @LastEditors: 皇甫国贝
- * @LastEditTime: 2019-09-29 17:46:30
+ * @LastEditTime: 2019-09-29 17:52:36
  * @Description: 
  -->
 # 手摸手讲述VUE项目搭建及Es6的应用
@@ -68,7 +68,7 @@ vue-router|`npm install vue-router`|路由跳转
 ```
 .
 ├── node_modules【项目所有依赖】
-├── public【静态资源、访问入口】
+├── public【全局静态资源】
 │   ├── favicon.ico【icon】
 │   └── index.html【访问入口】
 ├── assets【静态资源】
@@ -76,15 +76,13 @@ vue-router|`npm install vue-router`|路由跳转
 ├── src
 │   ├── assets【静态资源】
 │   |   └── img
-|   └── components
+|   └── components【组件文件】
 ├── main.js【入口文件】
-├── router【路由控制】
-├── store【vuex状态管理】
-│   ├── getters.js
-│   ├── index.js
-│   └── modules
-│       ├── app.js
-│       └── user.js
+├── router【路由控制-新建】
+    └──  index.js
+├── store【vuex状态管理-新建】
+    └──  index.js
+    
 
 ```
 
