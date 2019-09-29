@@ -2,7 +2,7 @@
  * @Author: 皇甫国贝
  * @Date: 2019-09-27 10:39:14
  * @LastEditors: 皇甫国贝
- * @LastEditTime: 2019-09-29 17:32:17
+ * @LastEditTime: 2019-09-29 17:33:23
  * @Description: 
  -->
 # 手摸手讲述VUE项目搭建及Es6的应用
@@ -26,7 +26,8 @@
 
 
  废话不说了，现在让我们开始一个项目的搭建，在这里我们用的是最新的vue脚手架vue-cli3,问什么用vue-cli3？[请点击这里](https://segmentfault.com/q/1010000019785471)
- 
+ 准备工作
+ ---
  <h4>首先检查当前环境,打开服务终端</h4>：<br>
 node -v  //检查是不是最新node版本[官网](http://nodejs.cn/)<br>
 npm -v   //查看npm是否正常[官网]（https://www.npmjs.cn）<br>
