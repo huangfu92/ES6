@@ -2,7 +2,7 @@
  * @Author: 皇甫国贝
  * @Date: 2019-09-27 10:39:14
  * @LastEditors: 皇甫国贝
- * @LastEditTime: 2019-10-11 16:52:14
+ * @LastEditTime: 2019-10-12 16:13:54
  * @Description: 
  -->
 # 手摸手讲述VUE项目搭建及Es6的应用
@@ -83,7 +83,6 @@ vue-router|`npm install vue-router`|路由跳转
 └── store【vuex状态管理-新建】
     └──  index.js
     
-
 ```
 
 
