@@ -2,10 +2,10 @@
  * @Author: 皇甫国贝
  * @Date: 2019-09-27 10:39:14
  * @LastEditors: 皇甫国贝
- * @LastEditTime: 2019-10-12 16:13:54
+ * @LastEditTime: 2019-10-14 17:18:02
  * @Description: 
  -->
-# 手摸手讲述VUE项目搭建及Es6的应用
+# 手摸手讲述VUE项目搭建
 
 > 前言：在做项目之前，我们先分析一下，一个项目的成型，都需要哪些技术:
 `vue.js`  `vueX` `Element` `vue-router` `Axios` `ES6` `vue-cli3`
