@@ -1,6 +1,13 @@
+<!--
+ * @Author: 皇甫国贝
+ * @Date: 2019-09-27 15:19:30
+ * @LastEditors: 皇甫国贝
+ * @LastEditTime: 2019-09-27 15:19:30
+ * @Description: 
+ -->
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>

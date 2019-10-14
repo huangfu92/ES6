@@ -2,7 +2,7 @@
  * @Author: 皇甫国贝
  * @Date: 2019-09-27 10:39:14
  * @LastEditors: 皇甫国贝
- * @LastEditTime: 2019-10-14 17:18:02
+ * @LastEditTime: 2019-10-14 18:03:41
  * @Description: 
  -->
 # 手摸手讲述VUE项目搭建
@@ -43,23 +43,6 @@ npm -v   //查看npm是否正常 [官网](https://www.npmjs.cn)<br>
 进入新建项目文件夹中： `cd vue`<br>
 启动项目：`npm run serve`<br>
 
-命令解析
-----
-`npm i element-ui -S`<br>
-i:install缩写<br>
--S：--save的简写，这样安装会将包的名称及版本号放在dependencies(开发环境、生产环境都能使用)里面<br>
--D：--save-dev的简写，安装的包的名称及版本号就会存在package.json的devDependencies(本地环境开发)这个里面<br>
--g:全局安装；不是脚手架性质的千万不要执行这个命令，因为他会导致你所安装的以前版本的项目依赖失效，导致项目启动失败<br>
-
-
-引入工作插件
------
-名称|命令|说明
---|--|--
-element-ui |`npm i element-ui -S` |UI组件库
-AXIOS|`npm install axios`|前后端交互（类似与ajax、XMLHttpRequest）
-vueX|`npm install vuex -S`|全局状态管理器
-vue-router|`npm install vue-router`|路由跳转
 
 开始实际项目操作
 -----
@@ -85,6 +68,28 @@ vue-router|`npm install vue-router`|路由跳转
     
 ```
 
+引入工作插件
+-----
+名称|命令|说明
+--|--|--
+element-ui |`npm i element-ui -S` |UI组件库
+AXIOS|`npm i axios`|前后端交互（类似与ajax、XMLHttpRequest）
+vueX|`npm i vuex -S`|全局状态管理器
+vue-router|`npm i vue-router`|路由跳转
+sass |`npm i less less-loader -S`|样式
 
+命令解析
+----
+`npm i element-ui -S`<br>
+i:install缩写<br>
+-S：--save的简写，这样安装会将包的名称及版本号放在dependencies(开发环境、生产环境都能使用)里面<br>
+-D：--save-dev的简写，安装的包的名称及版本号就会存在package.json的devDependencies(本地环境开发)这个里面<br>
+-g:全局安装；不是脚手架性质的千万不要执行这个命令，因为他会导致你所安装的以前版本的项目依赖失效，导致项目启动失败<br>
 
-
+vue单文件结构 和 HTML结构对比
+----
+VUE|HTML|说明
+--|--|--
+template| HTML|结构层
+script|script|行为层
+style|style|样式层
