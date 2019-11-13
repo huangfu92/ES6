@@ -1,8 +1,7 @@
-// eslint-disable-next-line prettier/prettier
 <!--
  * @Author: your name
  * @Date: 2019-09-27 15:19:30
- * @LastEditTime: 2019-11-13 17:48:21
+ * @LastEditTime: 2019-11-13 21:58:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /quality/Users/huangfu/ES6/vue/src/App.vue
@@ -16,8 +15,8 @@
 </template>
 
 <script>
-import HelloWorld from "./views/HelloWorld.vue";
-import HomeName from "./views/home.vue";
+import HelloWorld from "./views/HelloWorld.vue"; //实例
+import HomeName from "./views/home.vue"; // 比较样式的scoped属性
 // import Life from "./views/life.vue";
 
 export default {

@@ -2,44 +2,51 @@
  * @Author: 皇甫国贝
  * @Date: 2019-09-27 15:19:30
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2019-11-13 16:28:41
+ * @LastEditTime: 2019-11-13 22:09:51
  * @Description: 
  -->
 <template>
   <div>
-    <!---scoped--->
-    <p class="name"></p>
+    <!-- ref $refs操作 -->
     <refs ref="refData" />
-    <div class="namea">这是Hello组件</div>
+    <!-- 根据 $ref获取子组件的变量-->
     <el-button type="primary" @click="handleChange">获取子组件变量</el-button>
+    <!-- {{}}表达式 -->
     <p>子组件参数是：（{{ aaa }}）</p>
+    <!-- scoped属性 -->
+    <div class="namea">这是Hello组件</div>
+    <!-- v-show&v-if的区别 -->
     <p v-show="showIf">v-show</p>
     <p v-if="!showIf">v-if</p>
+    <!-- 点击切换v-show&v-if -->
     <el-button type="primary" @click="handleChangeIfShow"
       >切换show状态</el-button
     >
     <!---text\html\{{}}\model--->
-    <!-- <p v-text="vmsg"></p>
-      <p v-text="vHtml"></p>
-      <div v-html="vHtml"></div>
-      <p>你好{{name}}</p>
-      <div v-if="Is_type">
-        <p>你的年龄{{ age }}</p>
-        <button @click="ClicPluskAge">点击按钮加一岁</button>
-        <button @click="ClickRedAge">点击按钮减一岁</button>
-      </div>
-      <button @click="IS_Age">{{!Is_type?"显示":"隐藏"}}年龄</button>
-      <p>请输入你的手机号<input v-model="iphone"/></p>
-       您输入的手机号是{{iphone}}<br>
-       <select v-model="news" >
-         <option 
-         v-for="(v,k) in grade" 
-         :value="v"
-         :key="k">
-           {{v.name}}
-         </option>
-       </select><br>
-您选中的人是<span class="spanA">{{news.name}}</span>,选中人的年龄是<span  class="spanA">{{news.age}}</span><br> -->
+    <!-- v-text&v-html的区别 -->
+    <p v-text="vmsg"></p>
+    <p v-text="vHtml"></p>
+    <div v-html="vHtml"></div>
+    <!-- 知识点实例拓展 -->
+    <p>你好{{ name }}</p>
+    <div v-if="Is_type">
+      <p>你的年龄{{ age }}</p>
+      <button @click="ClicPluskAge">点击按钮加一岁</button>
+      <button @click="ClickRedAge">点击按钮减一岁</button>
+    </div>
+    <button @click="IS_Age">{{ !Is_type ? "显示" : "隐藏" }}年龄</button>
+    <!-- v-model使用 -->
+    <p>请输入你的手机号<input v-model="iphone" /></p>
+    您输入的手机号是{{ iphone }}<br />
+    <!-- v-for&v-model使用 -->
+    <select v-model="news">
+      <option v-for="(v, k) in grade" :value="v" :key="k">
+        {{ v.name }}
+      </option> </select
+    ><br />
+    您选中的人是<span class="spanA">{{ news.name }}</span
+    >,选中人的年龄是<span class="spanA">{{ news.age }}</span
+    ><br />
   </div>
 </template>
 
@@ -75,9 +82,7 @@ export default {
       aaa: ""
     };
   },
-  created() {
-    console.log(this);
-  },
+  created() {},
   methods: {
     handleChange() {
       this.aaa = this.$refs.refData.userNmae;
@@ -85,18 +90,17 @@ export default {
     handleChangeIfShow() {
       this.showIf = !this.showIf;
     },
+    //添加一岁函数
     ClicPluskAge() {
       this.age = this.age++ === 100 ? 100 : this.age;
     },
+    //减少一岁函数
     ClickRedAge() {
       this.age = this.age-- === 0 ? 0 : this.age;
     },
+    //显示年龄
     IS_Age() {
       this.Is_type = !this.Is_type;
-    },
-    SelectFun(v) {
-      // eslint-disable-next-line no-console
-      console.log(11111, v);
     }
   }
 };
