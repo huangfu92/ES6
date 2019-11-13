@@ -1,8 +1,8 @@
 <!--
  * @Author: 皇甫国贝
  * @Date: 2019-09-27 10:39:14
- * @LastEditors: 皇甫国贝
- * @LastEditTime: 2019-10-14 18:03:41
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2019-11-13 10:30:11
  * @Description: 
  -->
 # 手摸手讲述VUE项目搭建
@@ -76,7 +76,8 @@ element-ui |`npm i element-ui -S` |UI组件库
 AXIOS|`npm i axios`|前后端交互（类似与ajax、XMLHttpRequest）
 vueX|`npm i vuex -S`|全局状态管理器
 vue-router|`npm i vue-router`|路由跳转
-sass |`npm i less less-loader -S`|样式
+less |`npm i less less-loader -S`|样式
+sass |`npm i sass sass-loader -S`|样式
 
 命令解析
 ----
@@ -92,4 +93,7 @@ VUE|HTML|说明
 --|--|--
 template| HTML|结构层
 script|script|行为层
-style|style|样式层
+style(sass、less)|style(css)|样式层
+
+vue操作及指令
+----
