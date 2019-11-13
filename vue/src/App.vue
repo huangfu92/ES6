@@ -1,9 +1,11 @@
+// eslint-disable-next-line prettier/prettier
 <!--
- * @Author: 皇甫国贝
+ * @Author: your name
  * @Date: 2019-09-27 15:19:30
+ * @LastEditTime: 2019-11-13 17:48:21
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2019-11-13 14:39:30
- * @Description: 
+ * @Description: In User Settings Edit
+ * @FilePath: /quality/Users/huangfu/ES6/vue/src/App.vue
  -->
 <template>
   <div id="app">

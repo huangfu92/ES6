@@ -7,31 +7,28 @@
  -->
 <template>
   <div>
-      <p class="name"></p>
-      <div class="namea"> 这是home组件</div>
+    <p class="name"></p>
+    <div class="namea">这是home组件</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data(){
+  name: "HelloWorld",
+  data() {
     return {
-      vmsg:"Hello Vue"
-    }
+      vmsg: "Hello Vue"
+    };
   },
-  created () {
-    
-  },
-  methods : {
-  }
-}
+  created() {},
+  methods: {}
+};
 </script>
 <!-- 添加“scoped”属性以将CSS仅限于此组件 -->
 <style scoped>
-.namea{
-  background:#000;
-  width:200px;
-  height:200px;
+.namea {
+  background: #000;
+  width: 200px;
+  height: 200px;
 }
 </style>

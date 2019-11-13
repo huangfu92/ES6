@@ -2,7 +2,7 @@
  * @Author: 皇甫国贝
  * @Date: 2019-09-27 15:19:30
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2019-11-13 15:30:39
+ * @LastEditTime: 2019-11-13 16:28:41
  * @Description: 
  -->
 <template>
@@ -13,6 +13,11 @@
     <div class="namea">这是Hello组件</div>
     <el-button type="primary" @click="handleChange">获取子组件变量</el-button>
     <p>子组件参数是：（{{ aaa }}）</p>
+    <p v-show="showIf">v-show</p>
+    <p v-if="!showIf">v-if</p>
+    <el-button type="primary" @click="handleChangeIfShow"
+      >切换show状态</el-button
+    >
     <!---text\html\{{}}\model--->
     <!-- <p v-text="vmsg"></p>
       <p v-text="vHtml"></p>
@@ -51,6 +56,7 @@ export default {
       vHtml: "<p>Hello Vue</p>",
       name: "张三",
       age: 18,
+      showIf: false,
       Is_type: false,
       iphone: "",
       grade: [
@@ -75,6 +81,9 @@ export default {
   methods: {
     handleChange() {
       this.aaa = this.$refs.refData.userNmae;
+    },
+    handleChangeIfShow() {
+      this.showIf = !this.showIf;
     },
     ClicPluskAge() {
       this.age = this.age++ === 100 ? 100 : this.age;
