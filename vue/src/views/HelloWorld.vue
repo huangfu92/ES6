@@ -2,16 +2,19 @@
  * @Author: 皇甫国贝
  * @Date: 2019-09-27 15:19:30
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2019-11-13 11:01:35
+ * @LastEditTime: 2019-11-13 15:30:39
  * @Description: 
  -->
 <template>
   <div>
     <!---scoped--->
-      <p class="name"></p>
-      <div class="namea"> 这是Hello组件</div>
+    <p class="name"></p>
+    <refs ref="refData" />
+    <div class="namea">这是Hello组件</div>
+    <el-button type="primary" @click="handleChange">获取子组件变量</el-button>
+    <p>子组件参数是：（{{ aaa }}）</p>
     <!---text\html\{{}}\model--->
-      <!-- <p v-text="vmsg"></p>
+    <!-- <p v-text="vmsg"></p>
       <p v-text="vHtml"></p>
       <div v-html="vHtml"></div>
       <p>你好{{name}}</p>
@@ -36,49 +39,58 @@
 </template>
 
 <script>
+import refs from "@/views/ref.vue";
 export default {
-  name: 'HelloWorld',
-  data(){
+  name: "HelloWorld",
+  components: {
+    refs
+  },
+  data() {
     return {
-      vmsg:"Hello Vue",
-      vHtml:"<p>Hello Vue</p>",
-      name:"张三",
-      age:18,
-      Is_type:false,
-      iphone:"",
-      grade:[
-        {name:"张三",age:12},
-        {name:"李四",age:13},
-        {name:"王五",age:14},
-        {name:"王二麻子",age:16},
-        {name:"王六",age:15},
-        {name:"王七",age:11},
-        {name:"梧语",age:17}
+      vmsg: "Hello Vue",
+      vHtml: "<p>Hello Vue</p>",
+      name: "张三",
+      age: 18,
+      Is_type: false,
+      iphone: "",
+      grade: [
+        { name: "张三", age: 12 },
+        { name: "李四", age: 13 },
+        { name: "王五", age: 14 },
+        { name: "王二麻子", age: 16 },
+        { name: "王六", age: 15 },
+        { name: "王七", age: 11 },
+        { name: "梧语", age: 17 }
       ],
-      news:{
-        name:"未知",age:0
-      }
-    }
+      news: {
+        name: "未知",
+        age: 0
+      },
+      aaa: ""
+    };
   },
-  created () {
-    
+  created() {
+    console.log(this);
   },
-  methods : {
+  methods: {
+    handleChange() {
+      this.aaa = this.$refs.refData.userNmae;
+    },
     ClicPluskAge() {
-      this.age = this.age++ === 100 ? 100 : this.age
+      this.age = this.age++ === 100 ? 100 : this.age;
     },
-    ClickRedAge(){
-      this.age = this.age-- === 0 ? 0 : this.age
+    ClickRedAge() {
+      this.age = this.age-- === 0 ? 0 : this.age;
     },
-    IS_Age(){
-      this.Is_type = !this.Is_type
+    IS_Age() {
+      this.Is_type = !this.Is_type;
     },
-    SelectFun(v){
+    SelectFun(v) {
       // eslint-disable-next-line no-console
-      console.log(11111,v)
+      console.log(11111, v);
     }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -97,14 +109,14 @@ li {
 a {
   color: #42b983;
 }
-.spanA{
-  color:red;
-  font-size:14px;
-  font-weight:700;
+.spanA {
+  color: red;
+  font-size: 14px;
+  font-weight: 700;
 }
-.namea{
-  background:#f00;
-  width:200px;
-  height:200px;
+.namea {
+  background: #f00;
+  width: 200px;
+  height: 200px;
 }
 </style>
