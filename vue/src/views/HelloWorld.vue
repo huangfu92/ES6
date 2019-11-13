@@ -2,7 +2,7 @@
  * @Author: 皇甫国贝
  * @Date: 2019-09-27 15:19:30
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2019-11-13 22:09:51
+ * @LastEditTime: 2019-11-13 22:17:59
  * @Description: 
  -->
 <template>
@@ -59,14 +59,15 @@ export default {
   },
   data() {
     return {
-      vmsg: "Hello Vue",
-      vHtml: "<p>Hello Vue</p>",
-      name: "张三",
-      age: 18,
-      showIf: false,
-      Is_type: false,
-      iphone: "",
+      vmsg: "Hello Vue", //V-html----变量
+      vHtml: "<p>Hello Vue</p>", //V-html----变量
+      name: "张三", //您的姓名----变量
+      age: 18, //您的年龄----变量
+      showIf: false, //v-if&v-show----变量
+      Is_type: false, //显示隐藏年龄----变量
+      iphone: "", //手机号----变量
       grade: [
+        //下拉菜单数据----变量
         { name: "张三", age: 12 },
         { name: "李四", age: 13 },
         { name: "王五", age: 14 },
@@ -76,18 +77,25 @@ export default {
         { name: "梧语", age: 17 }
       ],
       news: {
+        //选中下拉数据----变量
         name: "未知",
         age: 0
       },
-      aaa: ""
+      aaa: "" //获取子组件的变量----变量
     };
   },
   created() {},
   methods: {
+    //获取子组件的userNmae属性赋值给aaa变量
     handleChange() {
       this.aaa = this.$refs.refData.userNmae;
     },
+    //点击切换元素显示隐藏-操作变量
+
     handleChangeIfShow() {
+      // 变量等于当前变量的相反结果
+      //释：如果当前变量为true；那么就是false
+      //释：如果当前变量为false；那么就是true
       this.showIf = !this.showIf;
     },
     //添加一岁函数
